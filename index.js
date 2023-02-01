@@ -9,7 +9,7 @@ let confPassword = document.getElementById("confpassword");
 
 // Funcion para validar Formulario
 function validateForm(event) {
-
+    alert("funcion");
     // Formulario Válido
     sendForm = true;
 
@@ -23,19 +23,17 @@ function validateForm(event) {
 
     // Correo
     //Expresion Regular
-    const emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
-    let validEmail = emailRegex.test(email);
+    const emailRegex = new RegExp(/^(?!.*([A-Za-z0-9])\1{3})[A-Za-z0-9._%+-]{3,}\@[A-Za-z0-9-]{3,}\.[A-Za-z]{2,4}$/, "gm");
+    let validEmail = emailRegex.test(email.value);
    
     if (email.value == "") {
         error(email, "Rellene este campo");
     }
+    else if (validEmail == false) {
+        error(email, "Email inválido");
+    }
     else {
-        if (validEmail == false) {
-            error(email, "Email inválido");
-        }
-        else {
-            success(email);
-        }
+        success(email);
     }
 
     // Contraseña - Vacía, Mayor a 8 caracteres
