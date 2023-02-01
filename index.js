@@ -9,7 +9,6 @@ let confPassword = document.getElementById("confpassword");
 
 // Funcion para validar Formulario
 function validateForm(event) {
-    alert("funcion");
     // Formulario Válido
     sendForm = true;
 
