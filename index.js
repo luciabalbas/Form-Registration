@@ -30,7 +30,12 @@ function validateForm(event) {
         error(email, "Rellene este campo");
     }
     else {
-        success(email);
+        if (validEmail == false) {
+            error(email, "Email inválido");
+        }
+        else {
+            success(email);
+        }
     }
 
     // Contraseña - Vacía, Mayor a 8 caracteres
