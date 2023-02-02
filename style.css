@@ -46,19 +46,31 @@ form {
     display: block;
 }
 
-/* Botón de enviar */
+/* Botón de enviar,  Raton Sobre, Activo */
 button#submit {
     width: 100%;
     text-align: center;
-    margin: 2em 0;
-    padding: 0.5em;
-    font: 400 14px 'Poppins', sans-serif;
+    margin: 1em 0;
+    padding: 0.8em;
+    font: 600 1em 'Poppins', sans-serif;
     text-transform: uppercase;
     color: #c4c4c4;
     background: #5845fe;
     border-radius: 5px;
     border: 2px solid #1c1a29;
-    cursor: pointer; 
+    cursor: pointer;
+    transition: 1s;
+}
+
+button#submit:hover {
+    letter-spacing: 5px;
+    box-shadow: 0px 5px 5px 3px #1c1a29;
+    transition: letter-spacing 1s ease-in, box-shadow 1s ease-out;
+}
+
+button#submit:active {
+    transform: translateY(4px);
+    box-shadow: none;
 }
 
 /* Estilos de los Inputs, Foco, Error, Correcto */

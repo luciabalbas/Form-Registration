@@ -21,10 +21,11 @@ function validateForm(event) {
     }
 
     // Correo
-    //Expresion Regular
+    // Expresion Regular
     const emailRegex = new RegExp(/^(?!.*([A-Za-z0-9])\1{3})[A-Za-z0-9._%+-]{3,}\@[A-Za-z0-9-]{3,}\.[A-Za-z]{2,4}$/, "gm");
     let validEmail = emailRegex.test(email.value);
    
+    // Si vacío, No coincide con la expresión regular
     if (email.value == "") {
         error(email, "Rellene este campo");
     }
@@ -46,7 +47,7 @@ function validateForm(event) {
         success(password);
     }
 
-    // Comprobación contraseña - Vacía, desigual a Contraseña
+    // Comprobación contraseña - Vacía, Desigual a Contraseña
     if (confPassword.value == "") {
         error(confPassword, "Rellene este campo");
     }
@@ -57,7 +58,7 @@ function validateForm(event) {
         success(confPassword);
     }
 
-    // Si hay algún error - No se envía
+    // Si hay algún error : No se envía
     if (sendForm == false) {
         event.preventDefault();
     }
