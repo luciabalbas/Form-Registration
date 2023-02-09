@@ -1,7 +1,4 @@
 /* Style para práctica de Laboratorio - Lucia Balbas */
-/* Introducción de la fuente al css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 /* Estilo universal */
 * {
     box-sizing: border-box;
@@ -73,10 +70,11 @@ button#submit:active {
     box-shadow: none;
 }
 
-/* Estilos de los Inputs, Foco, Error, Correcto */
+/* Estilos de los Inputs, Foco, Error, Correcto (Icono) */
 .form-control input {
     width: 100%;
     padding: 1em;
+    padding-right: 35px;
     border-radius: 5px;
     margin: 0.5em 0;
     border: 3px solid transparent;
@@ -90,10 +88,14 @@ button#submit:active {
 
 .form-control.error input {
     border: 3px solid #c10000;
+    background: field url(images/error-icon.svg) no-repeat 97%;
+    background-size: 20px;
 }
 
 .form-control.success input {
     border: 3px solid #008000;
+    background: field url(images/success-icon.svg) no-repeat 97%;
+    background-size: 20px;
 }
 
 /* Texto error */
@@ -102,14 +104,6 @@ button#submit:active {
     height: 21px;
     font: 14px 'Poppins', sans-serif;
     color: #ff4040;
-}
-
-/* Icono */
-.form-control img {
-    position: absolute;
-    margin-top: 1.25rem;
-    margin-left: -1.9rem;
-    z-index: 1;
 }
 
 /* Media querie para un diseño responsive - Pantallas menores a 600px */

@@ -10,40 +10,38 @@
     <meta name="description" content="Practica de Laboratorio Desarrollo Front-End">
     <!-- Enlace al archivo de estilos -->
     <link rel="stylesheet" href="style.css">
+    <!-- Enlace a Fuente Externa -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Cuerpo -->
     <div class="selector">
         <h1>Create Account</h1>
         <!-- Formulario -->
-        <form name="form" id="myform" onsubmit="validateForm(event)">
+        <form name="form" id="myform" onsubmit="validateForm(event)" autocomplete="off" action="">
             <!-- Nombre -->
                 <div class="form-control"> 
                     <label for="username">Nombre</label>
-                    <input name="username" type="text" id="username" pattern="[a-zA-Z]+" value="">
-                    <img src="" alt="">
+                    <input name="username" type="text" id="username" pattern="[a-zA-Z]+">
                     <p></p>
                 </div>
             <!-- Correo -->
                 <div class="form-control">
                     <label for="email">Email</label>
                     <input name="email" id="email" type="email">
-                    <img src="" alt="">
                     <p></p>
                 </div>
             <!-- Clave -->
                 <div class="form-control">
                     <label for="password">Clave</label>
-                    <input name="password" id="password" type="password" >
-                    <img src="" alt="">
+                    <input name="password" id="password" autocomplete="new-password" type="password">
                     <p></p>
                 </div>
             <!-- Confirme su clave -->
                 <div class="form-control">
                     <label for="confpassword">Confirme su clave</label>
-                    <input name="confpassword" id="confpassword" type="password" >
-                    <img src="" alt="">
-                <p></p>
+                    <input name="confpassword" id="confpassword" autocomplete="new-password" type="password">
+                    <p></p>
                 </div>
             <!-- Enviar formulario -->
                 <button type="submit" id="submit">Enviar</button>

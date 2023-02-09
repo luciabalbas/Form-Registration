@@ -2,10 +2,10 @@
 
 // Variables del formulario
 const form = document.getElementById("myform");
-let userName = document.getElementById("username");
-let email = document.getElementById("email");
-let password = document.getElementById("password");
-let confPassword = document.getElementById("confpassword");
+var userName = document.getElementById("username");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+var confPassword = document.getElementById("confpassword");
 
 // Funcion para validar Formulario
 function validateForm(event) {
@@ -72,9 +72,6 @@ function success(input) {
     let parent = input.parentElement;
     let text = parent.querySelector("p");
     text.textContent = "";
-    let icon = parent.querySelector("img");
-    icon.src = "images/success-icon.svg";
-    icon.alt = "Success";
     parent.classList.remove("error");
     parent.classList.add("success");
 }
@@ -84,9 +81,6 @@ function error(input, message) {
     let parent = input.parentElement;
     let text = parent.querySelector("p");
     text.textContent = message;
-    let icon = parent.querySelector("img");
-    icon.src = "images/error-icon.svg";
-    icon.alt = "Error";
     parent.classList.remove("success");
     parent.classList.add("error");
     sendForm = false;
