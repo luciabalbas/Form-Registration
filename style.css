@@ -43,7 +43,7 @@ form {
     display: block;
 }
 
-/* Botón de enviar,  Raton Sobre, Activo */
+/* Botón de enviar, Raton Sobre, Activo */
 button#submit {
     width: 100%;
     text-align: center;
@@ -70,7 +70,7 @@ button#submit:active {
     box-shadow: none;
 }
 
-/* Estilos de los Inputs, Foco, Error, Correcto (Icono) */
+/* Estilos de los Inputs, Foco, Error y Correcto (Icono) */
 .form-control input {
     width: 100%;
     padding: 1em;

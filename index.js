@@ -1,7 +1,6 @@
 // Script - Practica Laboratorio - Lucia Balbás
 
 // Variables del formulario
-const form = document.getElementById("myform");
 var userName = document.getElementById("username");
 var email = document.getElementById("email");
 var password = document.getElementById("password");
